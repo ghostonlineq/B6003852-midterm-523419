@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "B6003852-midterm": {
+    "angular-test": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/B6003852-midterm",
+            "outputPath": "dist/angular-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,8 +25,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/font-awesome/css/font-awesome.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -68,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "B6003852-midterm:build"
+            "browserTarget": "angular-test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "B6003852-midterm:build:production"
+              "browserTarget": "angular-test:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "B6003852-midterm:build"
+            "browserTarget": "angular-test:build"
           }
         },
         "test": {
@@ -116,15 +115,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "B6003852-midterm:serve"
+            "devServerTarget": "angular-test:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "B6003852-midterm:serve:production"
+              "devServerTarget": "angular-test:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "B6003852-midterm"
+    }
+  },
+  "defaultProject": "angular-test",
+  "cli": {
+    "analytics": false
+  }
 }
